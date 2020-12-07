@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { Form, Field, Button } from 'vant'
+import { Form, Field, Button, Toast } from 'vant'
 // 接口引入
 import { $login } from '@/network/login'
 export default {
@@ -50,7 +50,15 @@ export default {
   methods: {
     async onSubmit (values) {
       const result = await $login(values)
-      console.log(result)
+      const { msg, result: message, status } = result.data
+      if (status) {
+        Toast.success(msg)
+        this.$Cookies.set('token', message.token, { expires: 1, path: '/login' })
+        await this.$router.replace('/home')
+      } else {
+        Toast.success(msg)
+      }
+      // console.log(msg, message, status)
     }
   }
 }
