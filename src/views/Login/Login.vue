@@ -54,7 +54,7 @@ export default {
       if (status) {
         Toast.success(msg)
         this.$Cookies.set('token', message.token, { expires: 1, path: '/login' })
-        await this.$router.replace('/home')
+        await this.$router.replace('/main')
       } else {
         Toast.success(msg)
       }

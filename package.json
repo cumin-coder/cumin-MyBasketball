@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ali-oss": "^6.12.0",
     "axios": "^0.21.0",
     "css-loader": "2.0.2",
     "js-cookie": "^2.2.1",
@@ -19,7 +20,9 @@
     "lodash": "^4.17.20",
     "vant": "^2.11.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-waterfall": "^1.0.6",
+    "vue-waterfall2": "^1.10.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

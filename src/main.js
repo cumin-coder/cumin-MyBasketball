@@ -4,10 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Cookies from 'js-cookie'
-
+import waterfall from 'vue-waterfall2'
 Vue.config.productionTip = false
 Vue.prototype.$Cookies = Cookies
-
+Vue.use(waterfall)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
